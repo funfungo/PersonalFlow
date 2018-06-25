@@ -1,0 +1,36 @@
+{
+  "name": "personalflow",
+  "version": "1.0.0",
+  "description": "basic project workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funfungo/PersonalFlow.git"
+  },
+  "keywords": [
+    "gulp",
+    "workflow"
+  ],
+  "author": "funfungo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funfungo/PersonalFlow/issues"
+  },
+  "homepage": "https://github.com/funfungo/PersonalFlow#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-less": "^3.5.0",
+    "gulp-sftp": "^0.1.5",
+    "gulp-ssh": "^0.7.0",
+    "gulp-util": "^3.0.8",
+    "require-dir": "^1.0.0"
+  },
+  "dependencies": {}
+}
