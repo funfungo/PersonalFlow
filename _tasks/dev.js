@@ -8,7 +8,7 @@ const gulp = require('gulp'),
 
 const paths = {
     copy: {
-        src: ['src/html/**/*.html', 'src/img/**/*.*', 'src/media/**/*.*', 'src/js/**/*.js'],
+        src: ['src/html/**/*.html', 'src/img/**/*.*', 'src/media/**/*.*', 'src/js/**/*.js', 'src/iframes/**/*.*', 'src/font/**/*.*'],
     },
     less: {
         src: ['src/css/**/*.less','src/css/**/*.css']
@@ -24,8 +24,8 @@ function clean() {
     return del(['dev']);
 }
 //编译less
-function compileLess(file) {
-    let source = typeof(file) === 'function' ? paths.less.src : file;
+function compileLess() {
+    let source = paths.less.src;
     return gulp.src(source, {
             base: 'src'
         })
@@ -69,13 +69,13 @@ function watchHandler(type, file) {
     }else{
         switch (target) {
             case 'css':
-                compileLess(file);
+                compileLess();
                 break;
-            default: 
+            default:
                 copyFile(file);
-                
+
         }
-    }  
+    }
 }
 function deleteFile(file) {
     let target = file.replace('src/','dev/').replace('.less','.css').replace('.es6','.js');
